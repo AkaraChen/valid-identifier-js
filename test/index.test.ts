@@ -1,8 +1,17 @@
-// @vitest-environment node
-import {test, expect, describe} from 'vitest';
+import { test, expect, describe } from 'vitest';
+import isValidIdentifyName from '../src';
 
 describe('index module', () => {
-    test('1 equal 1', () => {
-        expect(1).toBe(1);
-    });
+    test('simple', () => {
+        expect(isValidIdentifyName('a')).toBe(true);
+    })
+    test('$', () => {
+        expect(isValidIdentifyName('$s')).toBe(true);
+    })
+    test('&', () => {
+        expect(isValidIdentifyName('&s')).toBe(false);
+    })
+    test('kwd', () => {
+        expect(isValidIdentifyName('await')).toBe(false);
+    })
 });
