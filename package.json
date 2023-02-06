@@ -1,6 +1,6 @@
 {
     "name": "@akrc/valid-identifier",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "",
     "main": "./dist/esm.js",
     "scripts": {
